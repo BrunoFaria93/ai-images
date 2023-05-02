@@ -13,7 +13,7 @@ const App = () => (
         <img src={Imagem} alt="logo" className="w-28 absolute bg-transparent top-5" />
       </Link>
 
-      <Link to="/create-post" className="font-inter font-medium bg-[#6469ff] text-white px-4 py-2 rounded-md">Create</Link>
+      <Link to="/create-post" className="font-inter font-medium bg-[#6469ff] hover:bg-[#8589ff] duration-200 text-white px-4 py-2 rounded-md">Create</Link>
     </header>
     <main className="sm:p-8 px-4 py-8 w-full bg-slate-950 min-h-[calc(100vh-73px)]">
       <Routes>

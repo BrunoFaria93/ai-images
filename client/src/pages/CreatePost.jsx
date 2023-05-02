@@ -95,7 +95,7 @@ const CreatePost = () => {
         <p className="mt-2 text-slate-200 text-[14px] max-w-[500px]">Generate an imaginative image through DALL-E AI and share it with the community</p>
       </div>
 
-      <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
+      <form className="mt-16 max-w-3xl" onSubmit={!loading && handleSubmit}>
         <div className="flex flex-col gap-5">
           <FormField
             labelName="Your Name"
@@ -143,8 +143,8 @@ const CreatePost = () => {
         <div className="mt-5 flex gap-5">
           <button
             type="button"
-            onClick={generateImage}
-            className=" text-white bg-green-700 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+            onClick={!generatingImg && generateImage}
+            className={generatingImg ? "text-white cursor-wait bg-emerald-600 hover:bg-emerald-500 duration-200 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center" : "text-white bg-emerald-600 hover:bg-emerald-500 duration-200 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"}
           >
             {generatingImg ? 'Generating...' : 'Generate'}
           </button>
@@ -154,7 +154,7 @@ const CreatePost = () => {
           <p className="mt-2 text-slate-200 text-[14px]">** Once you have created the image you want, you can share it with others in the community **</p>
           <button
             type="submit"
-            className="mt-3 text-white bg-[#6469ff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+            className={loading ? "mt-3 text-white bg-[#6469ff] hover:bg-[#8589ff] duration-200 font-medium cursor-wait rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center" : "mt-3 text-white bg-[#6469ff] hover:bg-[#8589ff] duration-200 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"}
           >
             {loading ? 'Sharing...' : 'Share with the Community'}
           </button>
