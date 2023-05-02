@@ -5,6 +5,7 @@
 
 * {
     font-family: 'Inter', sans-serif;
+    background-color: rgb(2 6 23);
 }
 
 @media screen and (min-width: 480px) {
@@ -21,4 +22,10 @@
 .prompt::-webkit-scrollbar-thumb {
   background-color: #666e75;
   border-radius: 5px;
+}
+.logo-text{
+    color: yellow;
+    z-index: 999;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+               1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
 }

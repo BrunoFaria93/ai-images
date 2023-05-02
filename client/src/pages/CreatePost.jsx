@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { preview } from '../assets';
 import { getRandomPrompt } from '../utils';
 import { FormField, Loader } from '../components';
+import { toast } from "react-toastify";
 
 const CreatePost = () => {
   const navigate = useNavigate();
@@ -25,6 +26,7 @@ const CreatePost = () => {
   };
 
   const generateImage = async () => {
+
     if (form.prompt) {
       try {
         setGeneratingImg(true);
@@ -65,7 +67,16 @@ const CreatePost = () => {
         });
 
         await response.json();
-        alert('Success');
+        toast("Successfully shared", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
         navigate('/');
       } catch (err) {
         alert(err);
@@ -80,8 +91,8 @@ const CreatePost = () => {
   return (
     <section className="max-w-7xl mx-auto">
       <div>
-        <h1 className="font-extrabold text-[#222328] text-[32px]">Create</h1>
-        <p className="mt-2 text-[#666e75] text-[14px] max-w-[500px]">Generate an imaginative image through DALL-E AI and share it with the community</p>
+        <h1 className="font-extrabold text-slate-200 text-[32px]">Create</h1>
+        <p className="mt-2 text-slate-200 text-[14px] max-w-[500px]">Generate an imaginative image through DALL-E AI and share it with the community</p>
       </div>
 
       <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
@@ -117,7 +128,7 @@ const CreatePost = () => {
               <img
                 src={preview}
                 alt="preview"
-                className="w-9/12 h-9/12 object-contain opacity-40"
+                className="w-9/12 h-9/12 object-contain bg-white opacity-40"
               />
             )}
 
@@ -140,7 +151,7 @@ const CreatePost = () => {
         </div>
 
         <div className="mt-10">
-          <p className="mt-2 text-[#666e75] text-[14px]">** Once you have created the image you want, you can share it with others in the community **</p>
+          <p className="mt-2 text-slate-200 text-[14px]">** Once you have created the image you want, you can share it with others in the community **</p>
           <button
             type="submit"
             className="mt-3 text-white bg-[#6469ff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
