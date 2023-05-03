@@ -1,11 +1,18 @@
-import FileSaver from 'file-saver';
-import { surpriseMePrompts } from '../constant';
+import FileSaver from "file-saver";
+import { surpriseMePrompts, surpriseMePromptsBr } from "../constant";
 
-export function getRandomPrompt(prompt) {
-  const randomIndex = Math.floor(Math.random() * surpriseMePrompts.length);
-  const randomPrompt = surpriseMePrompts[randomIndex];
+export function getRandomPrompt(prompt, br) {
+  var randomIndex = 0;
+  var randomPrompt = "";
+  if (br) {
+    randomIndex = Math.floor(Math.random() * surpriseMePromptsBr.length);
+    randomPrompt = surpriseMePrompts[randomIndex];
+  } else {
+    randomIndex = Math.floor(Math.random() * surpriseMePrompts.length);
+    randomPrompt = surpriseMePromptsBr[randomIndex];
+  }
 
-  if (randomPrompt === prompt) return getRandomPrompt(prompt);
+  if (randomPrompt === prompt) return getRandomPrompt(prompt, br);
 
   return randomPrompt;
 }

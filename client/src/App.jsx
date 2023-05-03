@@ -4,6 +4,7 @@ import Imagem  from './assets/logo-openai.png';
 import { Home, CreatePost } from './pages';
 import { ToastContainer } from 'react-toastify';
 
+
 const App = () => (
   <BrowserRouter>
     <header className="sticky top-0 z-40 w-full backdrop-blur p-4 flex justify-between 

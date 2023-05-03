@@ -9,6 +9,7 @@ const FormField = ({
   handleChange,
   isSurpriseMe,
   handleSurpriseMe,
+  br,
 }) => (
   <div>
     <div className="flex items-center gap-2 mb-2">
@@ -24,7 +25,7 @@ const FormField = ({
           onClick={handleSurpriseMe}
           className="font-semibold text-xs bg-slate-700 border border-slate-300 py-1 px-2 rounded-[5px] text-white"
         >
-          Surprise me
+          {br ? "Me surpreenda" : "Surprise me"}
         </button>
       )}
     </div>
