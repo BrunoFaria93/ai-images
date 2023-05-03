@@ -73,7 +73,7 @@ const Home = ({ br }) => {
           {br ? "Galeria de Usuários" : "Users Gallery"}
         </h1>
         <p className="mt-2 text-slate-200 text-[14px] max-w-[500px]">
-           {!br ? "Explore a compilation of creative and visually amazing pictures produced by DALL-E AI." : "Explore uma compilação de imagens criativas e visualmente impressionantes produzidas pela inteligência artificial DALL-E."} <br /> <br /> Developed by{" "}
+           {!br ? "Explore a compilation of creative and visually amazing pictures produced by DALL-E AI." : "Explore uma compilação de imagens criativas e visualmente impressionantes produzidas pela inteligência artificial DALL-E."} <br /> <br /> {br ? "Desenvolvido por" : "Developed by"}{" "}
           <a href="https://portfolio-brunofaria.vercel.app" className="text-[#6469ff] underline underline-offset-2">Bruno Faria<br/></a>
           {/* <button onClick={() => setBr(!br)} className="bg-slate-500 px-3 py-1 rounded-full mt-3">{!br ? "Traduzir PT-BR" : "Translate to English"}</button> */}
         </p>
