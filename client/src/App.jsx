@@ -21,7 +21,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <header
-        className="sticky top-0 z-40 w-full backdrop-blur p-4 flex justify-between 
+        className="sticky top-0 z-40 w-full backdrop-blur p-4 lg:px-[103px] flex justify-between 
     items-center transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10
      border-slate-50/[0.06] bg-slate-950/30"
       >
