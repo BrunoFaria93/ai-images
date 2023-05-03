@@ -99,7 +99,7 @@ const Home = ({ br }) => {
           <>
             {searchText && (
               <h2 className="font-medium text-slate-200 text-xl mb-3">
-                {br ? "Mostrando resultados para" : "Showing Resuls for"}
+                {br ? "Mostrando resultados para " : "Showing Resuls for "}
                 <span className="text-slate-200">{searchText}</span>:
               </h2>
             )}
