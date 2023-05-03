@@ -6,9 +6,9 @@ import { getRandomPrompt } from '../utils';
 import { FormField, Loader } from '../components';
 import { toast } from "react-toastify";
 
-const CreatePost = () => {
+const CreatePost = ( {br} ) => {
   const navigate = useNavigate();
-  const [br, setBr] = useState(false)
+  // const [br, setBr] = useState(false)
   const [form, setForm] = useState({
     name: '',
     prompt: '',
@@ -93,7 +93,7 @@ const CreatePost = () => {
       <div>
         <h1 className="font-extrabold text-slate-200 text-[32px]">{br ? "Criar" : "Create"}</h1>
         <p className="mt-2 text-slate-200 text-[14px] max-w-[500px]">{br ? "Crie uma imagem criativa através do DALL-E IA e compartilhe com a comunidade." : "Generate an imaginative image through DALL-E AI and share it with the community"}</p>
-        <button onClick={() => setBr(!br)} className="text-slate-200 text-[14px] max-w-[500px] bg-slate-500 px-3 py-1 rounded-full mt-3">{!br ? "Traduzir PT-BR" : "Translate to English"}</button>
+        {/* <button onClick={() => setBr(!br)} className="text-slate-200 text-[14px] max-w-[500px] bg-slate-500 px-3 py-1 rounded-full mt-3">{!br ? "Traduzir PT-BR" : "Translate to English"}</button> */}
         
 
       </div>

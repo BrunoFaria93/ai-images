@@ -17,7 +17,19 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-
+.styledSelect{
+  background-color: white;
+  padding: 0 10px;
+  font-weight: bold;
+}
+.styledSelect:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-color: black transparent transparent transparent;
+  position: absolute;
+}
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

@@ -12,7 +12,7 @@ const RenderCards = ({ data, title }) => {
   );
 };
 
-const Home = () => {
+const Home = ({ br }) => {
   const [loading, setLoading] = useState(false);
   const [allPosts, setAllPosts] = useState(null);
 
@@ -20,7 +20,7 @@ const Home = () => {
   const [searchTimeout, setSearchTimeout] = useState(null);
   const [searchedResults, setSearchedResults] = useState(null);
 
-  const [br, setBr] = useState(false)
+  // const [br, setBr] = useState(false)
   const fetchPosts = async () => {
     setLoading(true);
 
@@ -75,7 +75,7 @@ const Home = () => {
         <p className="mt-2 text-slate-200 text-[14px] max-w-[500px]">
            {!br ? "Explore a compilation of creative and visually amazing pictures produced by DALL-E AI." : "Explore uma compilação de imagens criativas e visualmente impressionantes produzidas pela inteligência artificial DALL-E."} <br /> <br /> Developed by{" "}
           <a href="https://portfolio-brunofaria.vercel.app" className="text-[#6469ff] underline underline-offset-2">Bruno Faria<br/></a>
-          <button onClick={() => setBr(!br)} className="bg-slate-500 px-3 py-1 rounded-full mt-3">{!br ? "Traduzir PT-BR" : "Translate to English"}</button>
+          {/* <button onClick={() => setBr(!br)} className="bg-slate-500 px-3 py-1 rounded-full mt-3">{!br ? "Traduzir PT-BR" : "Translate to English"}</button> */}
         </p>
       </div>
 
